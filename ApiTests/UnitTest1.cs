@@ -106,7 +106,7 @@ namespace ApiTests
           
                 for (int i = 0; i < jsonRootObject.consolidated_weather.Count-1; i++)
                 {
-                    Console.WriteLine("минимальная температура "+ jsonRootObject.consolidated_weather[i].min_temp.ToString());
+                    Console.WriteLine("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С‚РµРјРїРµСЂР°С‚СѓСЂР° "+ jsonRootObject.consolidated_weather[i].min_temp.ToString());
                  
                 }                       
             
@@ -158,10 +158,10 @@ namespace ApiTests
              data = responseData.Result;
             Root jsonRootObject = JsonConvert.DeserializeObject<Root>(data);
             Newclient.Dispose();          
-                Console.WriteLine("погода " + jsonRootObject.consolidated_weather[0].weather_state_name);
-                Console.WriteLine("ветер " + jsonRootObject.consolidated_weather[0].wind_speed);
-                Console.WriteLine("минимальная температура " + jsonRootObject.consolidated_weather[0].min_temp);
-                Console.WriteLine("максимальная температура " + jsonRootObject.consolidated_weather[0].max_temp);         
+                Console.WriteLine("РїРѕРіРѕРґР° " + jsonRootObject.consolidated_weather[0].weather_state_name);
+                Console.WriteLine("РІРµС‚РµСЂ " + jsonRootObject.consolidated_weather[0].wind_speed);
+                Console.WriteLine("РјРёРЅРёРјР°Р»СЊРЅР°СЏ С‚РµРјРїРµСЂР°С‚СѓСЂР° " + jsonRootObject.consolidated_weather[0].min_temp);
+                Console.WriteLine("РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ С‚РµРјРїРµСЂР°С‚СѓСЂР° " + jsonRootObject.consolidated_weather[0].max_temp);         
             Assert.Pass();
         }
 
